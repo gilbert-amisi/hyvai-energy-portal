@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "career_paths",
+  "info": {
+    "singularName": "career-path",
+    "pluralName": "career-paths",
+    "displayName": "Career-Path"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Candidate": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Stage": {
+      "type": "enumeration",
+      "required": false,
+      "default": "Trained",
+      "enum": [
+        "Trained",
+        "Certified",
+        "Intern",
+        "Hired"
+      ]
+    },
+    "Certificate": {
+      "type": "media",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "Stage"
+            },
+            "Certified"
+          ]
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "Internship_Details": {
+      "type": "richtext"
+    },
+    "Performance_Review": {
+      "type": "richtext"
+    }
+  }
+}

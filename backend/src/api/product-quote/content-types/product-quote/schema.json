@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_quotes",
+  "info": {
+    "singularName": "product-quote",
+    "pluralName": "product-quotes",
+    "displayName": "Product-Quote"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Location": {
+      "type": "string",
+      "required": true
+    },
+    "Products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    },
+    "Message": {
+      "type": "blocks",
+      "required": true
+    },
+    "Quote_Status": {
+      "type": "enumeration",
+      "required": false,
+      "default": "Pending",
+      "enum": [
+        "Pending",
+        "Processing",
+        "Quoted",
+        "Closed"
+      ]
+    },
+    "Quantity": {
+      "type": "integer",
+      "required": true,
+      "default": 1,
+      "min": 1
+    }
+  }
+}

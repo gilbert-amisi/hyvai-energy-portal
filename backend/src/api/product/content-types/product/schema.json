@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Item_Number": {
+      "type": "string",
+      "required": true
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Power Station",
+        "Solar Panel"
+      ]
+    },
+    "Picture": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Specifications": {
+      "type": "richtext",
+      "required": true
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "Applications": {
+      "type": "text",
+      "required": true
+    },
+    "Packaging_Info": {
+      "type": "text"
+    },
+    "Certificates": {
+      "type": "text"
+    },
+    "Battery_Cells": {
+      "type": "string"
+    },
+    "Datasheet": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
+    }
+  }
+}

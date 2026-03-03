@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "solution_quotes",
+  "info": {
+    "singularName": "solution-quote",
+    "pluralName": "solution-quotes",
+    "displayName": "Solution-Quote"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Location": {
+      "type": "string",
+      "required": true
+    },
+    "Sector": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Residential",
+        "Commercial",
+        "Industrial",
+        "NGO/Public"
+      ]
+    },
+    "Message": {
+      "type": "blocks",
+      "required": true
+    },
+    "Systems": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::home-grid.home-grid"
+    },
+    "Quote_Status": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Pending",
+      "enum": [
+        "Pending",
+        "Processing",
+        "Quoted",
+        "Closed"
+      ]
+    }
+  }
+}

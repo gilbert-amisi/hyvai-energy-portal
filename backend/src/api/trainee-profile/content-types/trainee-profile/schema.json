@@ -1,0 +1,110 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trainee_profiles",
+  "info": {
+    "singularName": "trainee-profile",
+    "pluralName": "trainee-profiles",
+    "displayName": "Trainee-Profile"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Sex": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Male",
+        "Female"
+      ]
+    },
+    "Birth": {
+      "type": "date",
+      "required": true
+    },
+    "Phone": {
+      "type": "string",
+      "required": true
+    },
+    "Nationality": {
+      "type": "string",
+      "required": true
+    },
+    "Location": {
+      "type": "string",
+      "required": true
+    },
+    "Education_Level": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "High School",
+        "Vocational",
+        "Bachelor",
+        "Master",
+        "PhD"
+      ]
+    },
+    "Education_Domain": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Electrical",
+        "Renewable Energy",
+        "Mechanical",
+        "Physics / Science",
+        "Computer Science",
+        "Other"
+      ]
+    },
+    "Bio": {
+      "type": "text",
+      "required": true
+    },
+    "Electrical_Skills": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Photovoltaic_Skills": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Renewable_Skills": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "CV": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "Student_ID_Manual": {
+      "type": "string"
+    }
+  }
+}

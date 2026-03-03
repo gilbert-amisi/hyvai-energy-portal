@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_grids",
+  "info": {
+    "singularName": "home-grid",
+    "pluralName": "home-grids",
+    "displayName": "Home-grid"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Picture": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Components": {
+      "type": "richtext",
+      "required": true
+    },
+    "Applications": {
+      "type": "richtext",
+      "required": true
+    },
+    "Mounting": {
+      "type": "richtext",
+      "required": true
+    },
+    "Warranty": {
+      "type": "text",
+      "required": true
+    },
+    "Certification": {
+      "type": "text",
+      "required": true
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "Catalog": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
+    }
+  }
+}

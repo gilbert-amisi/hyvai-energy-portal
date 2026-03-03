@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "training_tracks",
+  "info": {
+    "singularName": "training-track",
+    "pluralName": "training-tracks",
+    "displayName": "Training-Track"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Tag": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    },
+    "Level": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Entry level",
+        "Intermediate",
+        "Advanced"
+      ]
+    },
+    "Target": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Electricians & career switchers",
+        "Field technicians",
+        "EPC Site Engineer",
+        "Grand Public"
+      ]
+    },
+    "Duration": {
+      "type": "integer",
+      "required": true
+    },
+    "Price": {
+      "type": "decimal",
+      "required": true
+    },
+    "Start_Date": {
+      "type": "date",
+      "required": true
+    },
+    "Criteria": {
+      "type": "richtext",
+      "required": true
+    },
+    "Catalog": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "Program_Status": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Upcoming",
+      "enum": [
+        "Open",
+        "Closed",
+        "Upcoming"
+      ]
+    }
+  }
+}

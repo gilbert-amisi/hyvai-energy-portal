@@ -1,0 +1,92 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "blocks",
+      "required": true
+    },
+    "Country": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Angola",
+        "Benin",
+        "Botswana",
+        "Burkina Faso",
+        "Camerron",
+        "Central African Republic",
+        "Chad",
+        "Congo Brazaville",
+        "Cote d'ivoire",
+        "DR Congo",
+        "Equatorial Guinea",
+        "Gabon",
+        "Ghana",
+        "Guinea",
+        "Guinea-Bissau",
+        "Kenya",
+        "Liberia",
+        "Malawi",
+        "Mali",
+        "Mozambique",
+        "Namibia",
+        "Niger",
+        "Rwanda",
+        "Somalia",
+        "Sudan",
+        "Tanzania",
+        "Togo",
+        "Uganda",
+        "Zambia",
+        "Zimbabwe"
+      ]
+    },
+    "Location": {
+      "type": "string",
+      "required": true
+    },
+    "Capacity_MW": {
+      "type": "decimal",
+      "required": true
+    },
+    "Jobs_Created": {
+      "type": "integer",
+      "required": true
+    },
+    "CO2_Offset": {
+      "type": "decimal",
+      "required": true
+    },
+    "Technology_used": {
+      "type": "richtext",
+      "required": true
+    },
+    "Schedule": {
+      "type": "date",
+      "required": true
+    },
+    "Picture": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    }
+  }
+}
